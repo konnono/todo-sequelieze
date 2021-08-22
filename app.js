@@ -26,6 +26,8 @@ app.use(session({
   saveUninitialized: true
 }))
 
+const usePassport = require('./config/passport')
+usePassport(app)
 app.use(routes)
 
 app.listen(process.env.PORT, () => {
